@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <!-- Basic Page Needs
+        ================================================== -->
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="icon" href="{% static 'favicon.ico' %}">
+        <title>{% block head_title %}Елснаб Україна</title>{% endblock head_title %}
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="">
+
+        <!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Template CSS Files
+        ================================================== -->
+        {% block head_css %}
+            {% include 'includes/head_css.html' %}
+        {% endblock head_css %}
+    </head>
+    <body>
+        {% include 'includes/navbar.html' %}
+
+        {% block content %}
+        {% endblock content %}
+
+        {% include 'includes/footer.html' %}
+
+        <!-- Template Javascript Files
+        ================================================== -->
+        {% block javascript %}
+            {% include 'includes/javascript.html' %}
+        {% endblock javascript %}
+    </body>
+</html>

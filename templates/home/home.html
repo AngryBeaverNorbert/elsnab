@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_title %}Домівка | {{ block.super}}{% endblock %}
+
+{% block content %}
+    <!--
+    ==================================================
+    Slider Section Start
+    ================================================== -->
+    <section id="hero-area" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="block wow fadeInUp" data-wow-delay=".3s">
+                    <!-- Slider -->
+                    <section class="cd-intro">
+                        <h1 class="wow fadeInUp animated cd-headline slide" data-wow-delay=".4s" >
+                        <span>Вас вітає фірма Елснаб Україна</span><br>
+                        <span class="cd-words-wrapper">
+                            <b class="is-visible">Дуже скоро</b>
+                            <b>ми захопимо</b>
+                            <b>весь світ</b>
+                        </span>
+                        </h1>
+                        </section> <!-- cd-intro -->
+                        <!-- /.slider -->
+                        <h2 class="wow fadeInUp animated" data-wow-delay=".6s" >
+                            Наша фірма виконує весь спектр робіт по монтажу і пуско-налагоджувальних робіт<br>
+                            Будь якої складності з використанням обладнання світових брендів
+                        </h2>
+                        <a class="btn-lines dark light wow fadeInUp animated smooth-scroll btn btn-default btn-green"
+                           data-wow-delay=".9s" href="#works" data-section="#works">
+                            Наші послуги і обладнання
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#main-slider-->
+
+    <!--
+    ==================================================
+    About Section Start
+    ================================================== -->
+{#    {% include 'includes/about.html' %}#}
+    <!-- /#about -->
+
+
+    <!--
+    ==================================================
+    Portfolio Section Start
+    ================================================== -->
+    <section id="works" class="works">
+        <div class="container">
+            <div class="section-heading">
+                <h1 class="title wow fadeInDown" data-wow-delay=".3s">Наші послуги і обладнання</h1>
+                <p class="wow fadeInDown" data-wow-delay=".5s">
+                    Aliquam lobortis. Maecenas vestibulum mollis diam. Pellentesque auctor neque nec urna. Nulla sit
+                    amet est. Aenean posuere <br> tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin
+                    urna dolor sagittis lacus.
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                    <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                        <div class="img-wrapper">
+                            <img src="{% static 'images/portfolio/item-1.jpg' %}" class="img-responsive" alt="this is a title" >
+                            <div class="overlay">
+                                <div class="buttons">
+                                    <a href="">
+                                        Детально
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <figcaption>
+                        <h4>
+                        <a href="#">
+                            Генератори
+                        </a>
+                        </h4>
+                        <p>
+                            Всіх типів
+                        </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                        <div class="img-wrapper">
+                            <img src="{% static 'images/portfolio/item-2.jpg' %}" class="img-responsive" alt="this is a title" >
+                            <div class="overlay">
+                                <div class="buttons">
+                                    <a target="_blank" href="">
+                                        Детально
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <figcaption>
+                        <h4>
+                        <a href="#">
+                            Електрощитове обладнання
+                        </a>
+                        </h4>
+                        <p>
+                            Всіх типів
+                        </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                        <div class="img-wrapper">
+                            <img src="{% static 'images/portfolio/item-3.jpg' %}" class="img-responsive" alt="this is a title" >
+                            <div class="overlay">
+                                <div class="buttons">
+                                    <a target="_blank" href="">
+                                        Детально
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <figcaption>
+                        <h4>
+                        <a href="#">
+                            Стабілізатори
+                        </a>
+                        </h4>
+                        <p>
+                            Всіх типів
+                        </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                        <div class="img-wrapper">
+                            <img src="{% static 'images/portfolio/item-4.jpg' %}" class="img-responsive" alt="this is a title" >
+                            <div class="overlay">
+                                <div class="buttons">
+                                    <a target="_blank" href="">
+                                        Детально
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <figcaption>
+                        <h4>
+                        <a href="#">
+                            Джерела безперебійного живлення
+                        </a>
+                        </h4>
+                        <p>
+                            Всіх типів
+                        </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                        <div class="img-wrapper">
+                            <img src="{% static 'images/portfolio/item-5.jpg' %}" class="img-responsive" alt="this is a title" >
+                            <div class="overlay">
+                                <div class="buttons">
+                                    <a target="_blank" href="">
+                                        Детально
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <figcaption>
+                        <h4>
+                        <a href="#">
+                            Монтаж
+                        </a>
+                        </h4>
+                        <p>
+                            Будь якої складності
+                        </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                        <div class="img-wrapper">
+                            <img src="{% static 'images/portfolio/item-6.jpg' %}" class="img-responsive" alt="this is a title" >
+                            <div class="overlay">
+                                <div class="buttons">
+                                    <a target="_blank" href="">
+                                        Детально
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <figcaption>
+                        <h4>
+                        <a href="#">
+                            Сервіс
+                        </a>
+                        </h4>
+                        <p>
+                            Вищого ґатунку
+                        </p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section> <!-- #works -->
+    {% include 'includes/call_to_action.html' %}
+{% endblock content %}

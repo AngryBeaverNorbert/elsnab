@@ -1,0 +1,74 @@
+{% load static %}
+<!--
+==================================================
+Header Section Start
+================================================== -->
+<header id="top-bar" class="navbar-fixed-top animated-header">
+    <div class="container">
+        <div class="navbar-header">
+            <!-- responsive nav button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <!-- /responsive nav button -->
+
+            <!-- logo -->
+            <div class="navbar-brand">
+                <a href="{% url 'home:home' %}" >
+                    <img src="{% static 'images/logo.png' %}" alt="Лого фірми">
+                </a>
+            </div>
+            <!-- /logo -->
+        </div>
+        <!-- main menu -->
+        <nav class="collapse navbar-collapse navbar-right" role="navigation">
+            <div class="main-menu">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{% url 'home:home' %}">Домівка</a>
+                    </li>
+                    <li><a href="">Про нас</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Продукція <span class="caret"></span></a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="">Генератори</a></li>
+{#                                <li class="dropdown">#}
+{#                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Генератори <span class="caret"></span></a>#}
+{#                                    <div class="dropdown-menu">#}
+{#                                        <ul>#}
+{#                                            <li><a href="">Дизельні</a></li>#}
+{#                                            <li><a href="">Бензинові</a></li>#}
+{#                                            <li><a href="">Газові</a></li>#}
+{#                                            <li><a href="">Зварювальні</a></li>#}
+{#                                            <li><a href="">Додаткове обладнання</a></li>#}
+{#                                        </ul>#}
+{#                                    </div>#}
+{#                                </li>#}
+                                <li><a href="">Електрощитове обладнання</a></li>
+                                <li><a href="">Стабілізатори</a></li>
+                                <li><a href="">ДБЖ</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Наші послуги <span class="caret"></span></a>
+                        <div class="dropdown-menu">
+                            <ul>
+                                <li><a href="">Монтаж</a></li>
+                                <li><a href="">Сервіс</a></li>
+                                <li><a href="">Інсталяція</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Сервіс</a></li>
+                    <li><a href="">Контакти</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /main nav -->
+    </div>
+</header>

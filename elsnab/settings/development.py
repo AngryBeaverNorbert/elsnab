@@ -1,17 +1,13 @@
 from .base import *
 
 ALLOWED_HOSTS = ['*']
-INTERNAL_IPS = ['127.0.0.1']
 
 INSTALLED_APPS += [
     #  third party apps
 
     #  local apps
+    'home',
 ]
-
-# MIDDLEWARE = [
-#     'debug_toolbar.middleware.DebugToolbarMiddleware',
-# ] + MIDDLEWARE
 
 # DATABASES = {
 #     'default': {
