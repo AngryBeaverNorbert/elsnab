@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_title %}Блог | {{ block.super}}{% endblock %}
+
+{% block content %}
+    <!--
+    ==================================================
+        Global Page Section Start
+    ================================================== -->
+    <section class="global-page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h2>Блог</h2>
+                        <ol class="breadcrumb">
+                            <li>
+                                <a href="{% url 'home:home' %}">
+                                    <i class="ion-ios-home"></i>
+                                    Домівка
+                                </a>
+                            </li>
+                            <li class="active">Блог</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=====================================
+    =            Full Width Blog            =
+    ======================================-->
+    <section id="blog-full-width">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <article class="wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">
+                        <div class="blog-post-image">
+                            <a href="{% url 'blog:blog_post' %}"><img class="img-responsive" src="{% static 'images/blog/post-1.jpg' %}" alt="" /></a>
+                        </div>
+                        <div class="blog-content">
+                            <h2 class="blogpost-title">
+                                <a href="{% url 'blog:blog_post' %}">Космос не повинен бути перешкодою</a>
+                            </h2>
+                            <div class="blog-meta">
+                                <span>21 липня, 18</span>
+                                <span>автор: <a href="">Андрій Овденко</a></span>
+                                <span>Категорія: <a href="">Генератори</a></span>
+                            </div>
+                            <p>Ultrices posuere cubilia curae curabitur sit amet tortor ut massa commodo. Vestibulum consectetur euismod malesuada tincidunt cum. Sed ullamcorper dignissim consectetur ut tincidunt eros sed sapien consectetur dictum. Pellentesques sed volutpat ante, cursus port. Praesent mi magna, penatibus et magniseget dis parturient montes sed quia consequuntur magni dolores eos qui ratione.
+                            </p>
+                            <a href="{% url 'blog:blog_post' %}" class="btn btn-dafault btn-details">Продовжити читання</a>
+                        </div>
+                    </article>
+                    <article class="wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">
+                        <div class="blog-post-image">
+                            <a href="{% url 'blog:blog_post' %}"><img class="img-responsive" src="{% static 'images/blog/post-1.jpg' %}" alt="" /></a>
+                        </div>
+                        <div class="blog-content">
+                            <h2 class="blogpost-title">
+                                <a href="{% url 'blog:blog_post' %}">Space shouldn’t be the final frontier</a>
+                            </h2>
+                            <div class="blog-meta">
+                                <span>21 липня, 18</span>
+                                <span>автор: <a href="">Андрій Овденко</a></span>
+                                <span><a href="">business</a>,<a href="">people</a></span>
+                            </div>
+                            <p>Ultrices posuere cubilia curae curabitur sit amet tortor ut massa commodo. Vestibulum consectetur euismod malesuada tincidunt cum. Sed ullamcorper dignissim consectetur ut tincidunt eros sed sapien consectetur dictum. Pellentesques sed volutpat ante, cursus port. Praesent mi magna, penatibus et magniseget dis parturient montes sed quia consequuntur magni dolores eos qui ratione.
+                            </p>
+                            <a href="{% url 'blog:blog_post' %}" class="btn btn-dafault btn-details">Продовжити читання</a>
+                        </div>
+                    </article>
+                    <article class="wow fadeInDown" data-wow-delay=".3s" data-wow-duration="500ms">
+                        <div class="blog-post-image">
+                            <a href="{% url 'blog:blog_post' %}"><img class="img-responsive" src="{% static 'images/blog/post-1.jpg' %}" alt="" /></a>
+                        </div>
+                        <div class="blog-content">
+                            <h2 class="blogpost-title">
+                                <a href="{% url 'blog:blog_post' %}">Space shouldn’t be the final frontier</a>
+                            </h2>
+                            <div class="blog-meta">
+                                <span>21 липня, 18</span>
+                                <span>автор: <a href="">Андрій Овденко</a></span>
+                                <span><a href="">business</a>,<a href="">people</a></span>
+                            </div>
+                            <p>Ultrices posuere cubilia curae curabitur sit amet tortor ut massa commodo. Vestibulum consectetur euismod malesuada tincidunt cum. Sed ullamcorper dignissim consectetur ut tincidunt eros sed sapien consectetur dictum. Pellentesques sed volutpat ante, cursus port. Praesent mi magna, penatibus et magniseget dis parturient montes sed quia consequuntur magni dolores eos qui ratione.
+                            </p>
+                            <a href="{% url 'blog:blog_post' %}" class="btn btn-dafault btn-details">Продовжити читання</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% include 'includes/call_to_action.html' %}
+{% endblock content %}

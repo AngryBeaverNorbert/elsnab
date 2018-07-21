@@ -83,7 +83,7 @@ a:hover {
 .navbar-header .navbar-brand a {
   height: auto;
   display: inline-block;
-  margin-top: 8px;
+  margin-top: -27px;
 }
 .navbar-inverse .navbar-toggle:focus,
 .navbar-inverse .navbar-toggle {
@@ -140,7 +140,7 @@ a:hover {
   opacity: 0;
 }
 #hero-area {
-  background: url('../images/light-bulb.jpg') no-repeat 50%;
+  background: url('../images/l.jpg') no-repeat 50%;
   background-size: cover;
   background-attachment: fixed;
   padding: 230px 0;
@@ -744,7 +744,7 @@ ul.social-icons li {
 .works.service-page figure .buttons {
   position: absolute;
   top: 45%;
-  left: 13%;
+  left: 30%;
 }
 #clients {
   padding: 30px 0 60px;

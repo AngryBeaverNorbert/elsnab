@@ -1,8 +1,4 @@
 {% load static %}
-<!--
-==================================================
-Header Section Start
-================================================== -->
 <header id="top-bar" class="navbar-fixed-top animated-header">
     <div class="container">
         <div class="navbar-header">
@@ -30,27 +26,27 @@ Header Section Start
                     <li>
                         <a href="{% url 'home:home' %}">Домівка</a>
                     </li>
-                    <li><a href="">Про нас</a></li>
+                    <li><a href="{% url 'about_us:about_us' %}">Про нас</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Продукція <span class="caret"></span></a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li><a href="">Генератори</a></li>
-{#                                <li class="dropdown">#}
-{#                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Генератори <span class="caret"></span></a>#}
-{#                                    <div class="dropdown-menu">#}
-{#                                        <ul>#}
-{#                                            <li><a href="">Дизельні</a></li>#}
-{#                                            <li><a href="">Бензинові</a></li>#}
-{#                                            <li><a href="">Газові</a></li>#}
-{#                                            <li><a href="">Зварювальні</a></li>#}
-{#                                            <li><a href="">Додаткове обладнання</a></li>#}
-{#                                        </ul>#}
-{#                                    </div>#}
-{#                                </li>#}
-                                <li><a href="">Електрощитове обладнання</a></li>
-                                <li><a href="">Стабілізатори</a></li>
-                                <li><a href="">ДБЖ</a></li>
+                                <li><a href="{% url 'products:panels' %}">Електрощитове обладнання</a></li>
+                                <li><a href="{% url 'products:stabilizers' %}">Стабілізатори</a></li>
+                                <li><a href="{% url 'products:ups' %}">ДБЖ</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Генератори <span class="caret"></span></a>
+                                    <div class="dropdown-menu">
+                                        <ul>
+                                            <li><a href="{% url 'products:genset_list' %}">Всі генератори</a></li>
+                                            <li><a href="{% url 'products:single-genset-diesel' %}">Дизельні</a></li>
+                                            <li><a href="{% url 'products:single-genset-benzine' %}">Бензинові</a></li>
+                                            <li><a href="{% url 'products:single-genset-gas' %}">Газові</a></li>
+                                            <li><a href="{% url 'products:single-genset-welding' %}">Зварювальні</a></li>
+                                            <li><a href="{% url 'products:single-genset-additional-equipment' %}">Додаткове обладнання</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -58,14 +54,14 @@ Header Section Start
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Наші послуги <span class="caret"></span></a>
                         <div class="dropdown-menu">
                             <ul>
-                                <li><a href="">Монтаж</a></li>
-                                <li><a href="">Сервіс</a></li>
-                                <li><a href="">Інсталяція</a></li>
+                                <li><a href="{% url 'services:service' %}">Сервіс</a></li>
+                                <li><a href="{% url 'services:montage' %}">Монтаж</a></li>
+                                <li><a href="{% url 'services:installation' %}">Інсталяція</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="">Сервіс</a></li>
-                    <li><a href="">Контакти</a></li>
+                    <li><a href="{% url 'blog:blog_list' %}">Блог</a></li>
+                    <li><a href="{% url 'contacts:contacts' %}">Контакти</a></li>
                 </ul>
             </div>
         </nav>

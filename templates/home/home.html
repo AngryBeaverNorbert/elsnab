@@ -16,7 +16,7 @@
                     <!-- Slider -->
                     <section class="cd-intro">
                         <h1 class="wow fadeInUp animated cd-headline slide" data-wow-delay=".4s" >
-                        <span>Вас вітає фірма Елснаб Україна</span><br>
+                        <span>Вас вітає фірма Інпауер Україна</span><br>
                         <span class="cd-words-wrapper">
                             <b class="is-visible">Дуже скоро</b>
                             <b>ми захопимо</b>
@@ -68,7 +68,7 @@
                             <img src="{% static 'images/portfolio/item-1.jpg' %}" class="img-responsive" alt="this is a title" >
                             <div class="overlay">
                                 <div class="buttons">
-                                    <a href="">
+                                    <a href="{% url 'products:genset_list' %}">
                                         Детально
                                     </a>
                                 </div>
@@ -76,7 +76,7 @@
                         </div>
                         <figcaption>
                         <h4>
-                        <a href="#">
+                        <a href="{% url 'products:genset_list' %}">
                             Генератори
                         </a>
                         </h4>
@@ -92,7 +92,7 @@
                             <img src="{% static 'images/portfolio/item-2.jpg' %}" class="img-responsive" alt="this is a title" >
                             <div class="overlay">
                                 <div class="buttons">
-                                    <a target="_blank" href="">
+                                    <a href="{% url 'products:panels' %}">
                                         Детально
                                     </a>
                                 </div>
@@ -100,7 +100,7 @@
                         </div>
                         <figcaption>
                         <h4>
-                        <a href="#">
+                        <a href="{% url 'products:panels' %}">
                             Електрощитове обладнання
                         </a>
                         </h4>
@@ -116,7 +116,7 @@
                             <img src="{% static 'images/portfolio/item-3.jpg' %}" class="img-responsive" alt="this is a title" >
                             <div class="overlay">
                                 <div class="buttons">
-                                    <a target="_blank" href="">
+                                    <a href="{% url 'products:stabilizers' %}">
                                         Детально
                                     </a>
                                 </div>
@@ -124,7 +124,7 @@
                         </div>
                         <figcaption>
                         <h4>
-                        <a href="#">
+                        <a href="{% url 'products:stabilizers' %}">
                             Стабілізатори
                         </a>
                         </h4>
@@ -140,7 +140,7 @@
                             <img src="{% static 'images/portfolio/item-4.jpg' %}" class="img-responsive" alt="this is a title" >
                             <div class="overlay">
                                 <div class="buttons">
-                                    <a target="_blank" href="">
+                                    <a href="{% url 'products:ups' %}">
                                         Детально
                                     </a>
                                 </div>
@@ -148,7 +148,7 @@
                         </div>
                         <figcaption>
                         <h4>
-                        <a href="#">
+                        <a href="{% url 'products:ups' %}">
                             Джерела безперебійного живлення
                         </a>
                         </h4>
@@ -164,7 +164,7 @@
                             <img src="{% static 'images/portfolio/item-5.jpg' %}" class="img-responsive" alt="this is a title" >
                             <div class="overlay">
                                 <div class="buttons">
-                                    <a target="_blank" href="">
+                                    <a href="{% url 'services:montage' %}">
                                         Детально
                                     </a>
                                 </div>
@@ -172,7 +172,7 @@
                         </div>
                         <figcaption>
                         <h4>
-                        <a href="#">
+                        <a href="{% url 'services:montage' %}">
                             Монтаж
                         </a>
                         </h4>
@@ -188,7 +188,7 @@
                             <img src="{% static 'images/portfolio/item-6.jpg' %}" class="img-responsive" alt="this is a title" >
                             <div class="overlay">
                                 <div class="buttons">
-                                    <a target="_blank" href="">
+                                    <a href="{% url 'services:service' %}">
                                         Детально
                                     </a>
                                 </div>
@@ -196,7 +196,7 @@
                         </div>
                         <figcaption>
                         <h4>
-                        <a href="#">
+                        <a href="{% url 'services:service' %}">
                             Сервіс
                         </a>
                         </h4>
