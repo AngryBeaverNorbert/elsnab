@@ -63,7 +63,7 @@
                 required: "Come on, you have a name don't you?", minlength: "Your name must consist of at least 2 characters"
             }
             , email: {
-                required: "Please put your email address",
+                required: "Будь ласка, введіть ваш email",
             }
             , message: {
                 required: "Put some messages here?", minlength: "Your name must consist of at least 2 characters"
