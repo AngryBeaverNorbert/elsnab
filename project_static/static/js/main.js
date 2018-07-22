@@ -151,13 +151,8 @@ $(".fancybox").fancybox({
     }
 });
 
-
-
-
-
-
- 
-
-
-
-
+$(document).ready(function(){
+    $(".genset-btn").click(function () {
+        $(".genset-dropdown-list").toggle();
+    })
+});
