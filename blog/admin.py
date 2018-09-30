@@ -1,3 +1,20 @@
 from django.contrib import admin
+from .models import (
+    # Blog,
+    SingleBlog,
+    BlogImage
+)
 
-# Register your models here.
+
+class SingleBlogImageInline(admin.TabularInline):
+    model = BlogImage
+
+
+class SingleBlogAdmin(admin.ModelAdmin):
+    inlines = [
+        SingleBlogImageInline
+    ]
+
+
+# admin.site.register(Blog)
+admin.site.register(SingleBlog, SingleBlogAdmin)

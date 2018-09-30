@@ -35,6 +35,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # third party apps
+    'ckeditor',
+    'ckeditor_uploader',
+
+    # native apps
+    'home',
+    'about_us',
+    'products',
+    'services',
+    'blog',
+    'contacts',
 ]
 
 MIDDLEWARE = [
@@ -89,7 +101,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'uk_UA'
 
 TIME_ZONE = 'UTC'
 
@@ -121,3 +133,14 @@ FIXTURE_DIRS = (
 LOGIN_URL = 'login/'
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = '/'
+
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'antongramenko@gmail.com'
+EMAIL_HOST_PASSWORD = 'zvxoighycdjpcval'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'user@domain.com'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

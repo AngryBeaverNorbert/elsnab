@@ -35,105 +35,127 @@
     ================================================== -->
     <section class="works service-page">
         <div class="container" style="margin-top: -70px;">
-            <h2 class="subtitle text-center wow fadeInUp animated" data-wow-delay=".3s" data-wow-duration="500ms">
-                Оберіть необхідну тему</h2>
-            <div class="row">
-                <div class="col-sm-4">
-                     <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
-                        <div class="img-wrapper">
-                            <img src="{% static 'images/portfolio/item-1.jpg' %}" class="img-responsive" alt="this is a title" >
-                            <div class="overlay">
-                                <div class="buttons">
-                                    <a href="{% url 'products:single-genset-diesel' %}">Детально</a>
+            {% if genset_qty >= 1 %}
+                <h2 class="subtitle text-center wow fadeInUp animated" data-wow-delay=".3s" data-wow-duration="500ms">
+                    Оберіть необхідну тему</h2>
+                <div class="row">
+                    {% if genset.diesel_active %}
+                    <div class="col-sm-4">
+                         <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                            <div class="img-wrapper">
+                                <img src="{{ genset.diesel_image.url }}" class="img-responsive" alt="this is a title" >
+                                <div class="overlay">
+                                    <div class="buttons">
+                                        <a href="{% url 'products:single-genset-diesel' %}">Детально</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <figcaption>
-                            <h4>
-                                <a href="{% url 'products:single-genset-diesel' %}">
-                                    Дизельні
-                                </a>
-                            </h4>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-sm-4">
-                     <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
-                        <div class="img-wrapper">
-                            <img src="{% static 'images/portfolio/item-2.jpg' %}" class="img-responsive" alt="this is a title" >
-                            <div class="overlay">
-                                <div class="buttons">
-                                    <a href="{% url 'products:single-genset-benzine' %}">Детально</a>
+                            <figcaption>
+                                <h4>
+                                    <a href="{% url 'products:single-genset-diesel' %}">
+                                        Дизельні
+                                    </a>
+                                </h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    {% endif %}
+                    {% if genset.benzine_active %}
+                    <div class="col-sm-4">
+                         <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                            <div class="img-wrapper">
+                                <img src="{{ genset.benzine_image.url }}" class="img-responsive" alt="this is a title" >
+                                <div class="overlay">
+                                    <div class="buttons">
+                                        <a href="{% url 'products:single-genset-benzine' %}">Детально</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <figcaption>
-                            <h4>
-                                <a href="{% url 'products:single-genset-benzine' %}">
-                                    Бензинові
-                                </a>
-                            </h4>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-sm-4">
-                     <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
-                        <div class="img-wrapper">
-                            <img src="{% static 'images/portfolio/item-3.jpg' %}" class="img-responsive" alt="this is a title" >
-                            <div class="overlay">
-                                <div class="buttons">
-                                    <a href="{% url 'products:single-genset-gas' %}">Детально</a>
+                            <figcaption>
+                                <h4>
+                                    <a href="{% url 'products:single-genset-benzine' %}">
+                                        Бензинові
+                                    </a>
+                                </h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    {% endif %}
+                    {% if genset.gas_active %}
+                    <div class="col-sm-4">
+                         <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                            <div class="img-wrapper">
+                                <img src="{{ genset.gas_image.url }}" class="img-responsive" alt="this is a title" >
+                                <div class="overlay">
+                                    <div class="buttons">
+                                        <a href="{% url 'products:single-genset-gas' %}">Детально</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <figcaption>
-                            <h4>
-                                <a href="{% url 'products:single-genset-gas' %}">
-                                    Газові
-                                </a>
-                            </h4>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-sm-4">
-                     <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
-                        <div class="img-wrapper">
-                            <img src="{% static 'images/portfolio/item-4.jpg' %}" class="img-responsive" alt="this is a title" >
-                            <div class="overlay">
-                                <div class="buttons">
-                                    <a href="{% url 'products:single-genset-welding' %}">Детально</a>
+                            <figcaption>
+                                <h4>
+                                    <a href="{% url 'products:single-genset-gas' %}">
+                                        Газові
+                                    </a>
+                                </h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    {% endif %}
+                    {% if genset.welding_active %}
+                    <div class="col-sm-4">
+                         <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                            <div class="img-wrapper">
+                                <img src="{{ genset.welding_image.url }}" class="img-responsive" alt="this is a title" >
+                                <div class="overlay">
+                                    <div class="buttons">
+                                        <a href="{% url 'products:single-genset-welding' %}">Детально</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <figcaption>
-                            <h4>
-                                <a href="{% url 'products:single-genset-welding' %}">
-                                    Зварювальні
-                                </a>
-                            </h4>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-sm-4">
-                     <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
-                        <div class="img-wrapper">
-                            <img src="{% static 'images/portfolio/item-5.jpg' %}" class="img-responsive" alt="this is a title" >
-                            <div class="overlay">
-                                <div class="buttons">
-                                    <a href="{% url 'products:single-genset-additional-equipment' %}">Детально</a>
+                            <figcaption>
+                                <h4>
+                                    <a href="{% url 'products:single-genset-welding' %}">
+                                        Зварювальні
+                                    </a>
+                                </h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    {% endif %}
+                    {% if genset.equipment_active %}
+                    <div class="col-sm-4">
+                         <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                            <div class="img-wrapper">
+                                <img src="{{ genset.equipment_image.url }}" class="img-responsive" alt="this is a title" >
+                                <div class="overlay">
+                                    <div class="buttons">
+                                        <a href="{% url 'products:single-genset-additional-equipment' %}">Детально</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <figcaption>
-                            <h4>
-                                <a href="{% url 'products:single-genset-additional-equipment' %}">
-                                    Додаткове обладнання
-                                </a>
-                            </h4>
-                        </figcaption>
-                    </figure>
+                            <figcaption>
+                                <h4>
+                                    <a href="{% url 'products:single-genset-additional-equipment' %}">
+                                        Додаткове обладнання
+                                    </a>
+                                </h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    {% endif %}
                 </div>
-            </div>
+            {% else %}
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <br><br><br><br><br>
+                            <h2 class="text-center">Наразі в розділі пусто! Але скоро буде вдосталь інформації.</h2>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
         </div>
     </section>
 
@@ -141,53 +163,53 @@
     ==================================================
         Clients Section Start
     ================================================== -->
-    <section id="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="subtitle text-center wow fadeInUp animated"
-                        data-wow-duration="500ms" data-wow-delay=".3s">
-                        Наші щасливі і не дуже клієнти
-                    </h2>
-                    <p class="subtitle-des text-center wow fadeInUp animated"
-                       data-wow-duration="500ms" data-wow-delay=".5s">
-                        Це величезні транснаціональні компанії
-                    </p>
-                    <div id="clients-logo" class="owl-carousel">
-                        <div>
-                            <img src="{% static 'images/clients/logo-1.jpg' %}" alt="">
-                        </div>
-                        <div>
-                            <img src="{% static 'images/clients/logo-2.jpg' %}" alt="">
-                        </div>
-                        <div>
-                            <img src="{% static 'images/clients/logo-3.jpg' %}" alt="">
-                        </div>
-                        <div>
-                            <img src="{% static 'images/clients/logo-4.jpg' %}" alt="">
-                        </div>
-                        <div>
-                            <img src="{% static 'images/clients/logo-5.jpg' %}" alt="">
-                        </div>
-                        <div>
-                            <img src="{% static 'images/clients/logo-1.jpg' %}" alt="">
-                        </div>
-                        <div>
-                            <img src="{% static 'images/clients/logo-2.jpg' %}" alt="">
-                        </div>
-                        <div>
-                            <img src="{% static 'images/clients/logo-3.jpg' %}" alt="">
-                        </div>
-                        <div>
-                            <img src="{% static 'images/clients/logo-4.jpg' %}" alt="">
-                        </div>
-                        <div>
-                            <img src="{% static 'images/clients/logo-5.jpg' %}" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+{#    <section id="clients">#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-md-12">#}
+{#                    <h2 class="subtitle text-center wow fadeInUp animated"#}
+{#                        data-wow-duration="500ms" data-wow-delay=".3s">#}
+{#                        Наші щасливі і не дуже клієнти#}
+{#                    </h2>#}
+{#                    <p class="subtitle-des text-center wow fadeInUp animated"#}
+{#                       data-wow-duration="500ms" data-wow-delay=".5s">#}
+{#                        Це величезні транснаціональні компанії#}
+{#                    </p>#}
+{#                    <div id="clients-logo" class="owl-carousel">#}
+{#                        <div>#}
+{#                            <img src="{% static 'images/clients/logo-1.jpg' %}" alt="">#}
+{#                        </div>#}
+{#                        <div>#}
+{#                            <img src="{% static 'images/clients/logo-2.jpg' %}" alt="">#}
+{#                        </div>#}
+{#                        <div>#}
+{#                            <img src="{% static 'images/clients/logo-3.jpg' %}" alt="">#}
+{#                        </div>#}
+{#                        <div>#}
+{#                            <img src="{% static 'images/clients/logo-4.jpg' %}" alt="">#}
+{#                        </div>#}
+{#                        <div>#}
+{#                            <img src="{% static 'images/clients/logo-5.jpg' %}" alt="">#}
+{#                        </div>#}
+{#                        <div>#}
+{#                            <img src="{% static 'images/clients/logo-1.jpg' %}" alt="">#}
+{#                        </div>#}
+{#                        <div>#}
+{#                            <img src="{% static 'images/clients/logo-2.jpg' %}" alt="">#}
+{#                        </div>#}
+{#                        <div>#}
+{#                            <img src="{% static 'images/clients/logo-3.jpg' %}" alt="">#}
+{#                        </div>#}
+{#                        <div>#}
+{#                            <img src="{% static 'images/clients/logo-4.jpg' %}" alt="">#}
+{#                        </div>#}
+{#                        <div>#}
+{#                            <img src="{% static 'images/clients/logo-5.jpg' %}" alt="">#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </section>#}
     {% include 'includes/call_to_action.html' %}
 {% endblock content %}

@@ -1,6 +1,28 @@
 {% extends 'base.html' %}
 {% load static %}
 
+
+{% block head_css %}
+    {{ block.super }}
+    <style>
+        label {
+            display: none;
+        }
+        #contact-section input {
+            display: inline;
+        }
+        .helptext {
+            color: lightgrey;
+            padding-top: -30px;
+        }
+{#    form > .helptext {#}
+{#        display: inline;#}
+{#    }#}
+{#    form > #id_copy {#}
+{#        display: inline;#}
+{#    }#}
+    </style>
+{% endblock %}
 {% block head_title %}Контакти | {{ block.super}}{% endblock %}
 
 {% block content %}<!--
@@ -41,34 +63,36 @@
                             Заповніть, будь ласка, форму нажче і ми зв'яжемося з Вами
                         </p>
                         <div class="contact-form">
-                            <form id="contact-form" method="#" action="#" role="form">
+                            <form id="contact-form" method="post" role="form">
+                                {% csrf_token %}
 
-                                <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".6s">
-                                    <input type="text" placeholder="Ваше ім'я" class="form-control" name="name" id="name">
-                                </div>
-
-                                <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".8s">
-                                    <input type="email" placeholder="Ваш Email" class="form-control" name="email" id="email" >
-                                </div>
-
-                                <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">
-                                    <input type="text" placeholder="Тема повідомлення" class="form-control" name="subject" id="subject">
-                                </div>
-
-                                <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.2s">
-                                    <textarea rows="6" placeholder="Текст повідомлення" class="form-control" name="message" id="message"></textarea>
-                                </div>
-
-                                <div id="success" class="success">
-                                    Дякуємо за Ваш лист!
-                                </div>
-
-                                <div id="error" class="error">
-                                    Щось пішло не так. Спробуйте, будь ласка, пізніше.
-                                </div>
+                                {{ form.as_p }}
+{#                                <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".6s">#}
+{#                                    <input type="text" placeholder="Ваше ім'я" class="form-control" name="name" id="name">#}
+{#                                </div>#}
+{##}
+{#                                <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay=".8s">#}
+{#                                    <input type="email" placeholder="Ваш Email" class="form-control" name="email" id="email" >#}
+{#                                </div>#}
+{##}
+{#                                <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1s">#}
+{#                                    <input type="text" placeholder="Тема повідомлення" class="form-control" name="subject" id="subject">#}
+{#                                </div>#}
+{##}
+{#                                <div class="form-group wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.2s">#}
+{#                                        <textarea rows="6" placeholder="Текст повідомлення" class="form-control" name="message" id="message"></textarea>#}
+{#                                </div>#}
+{##}
+{#                                <div id="success" class="success">#}
+{#                                    Дякуємо за Ваш лист!#}
+{#                                </div>#}
+{##}
+{#                                <div id="error" class="error">#}
+{#                                    Щось пішло не так. Спробуйте, будь ласка, пізніше.#}
+{#                                </div>#}
 
                                 <div id="submit" class="wow fadeInDown" data-wow-duration="500ms" data-wow-delay="1.4s">
-                                    <input type="submit" id="contact-submit" class="btn btn-default btn-send" value="Відправити повідомлення">
+                                    <input type="submit" class="btn btn-default" value="Відправити повідомлення">
                                 </div>
                             </form>
                         </div>
@@ -81,7 +105,7 @@
                             Ви можете знайти нас за адресою, вкзаною на карті. <br>
                             Режим роботи: Пн - Пт з 9.00 до 19.00
                         </p>
-                        <div class="map">
+                        <div class="map"  style="margin-top: -15px;">
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2538.2154502098747!2d30.47156811573293!3d50.4929477794813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdf2dd543525%3A0x4784eb366f5445ec!2z0JrRg9GA0LXQvdGW0LLRgdGM0LrQuNC5INC_0YDQvtCy0YPQu9C-0LosIDE1LCDQmtC40ZfQsiwgMDIwMDA!5e0!3m2!1suk!2sua!4v1532173245239" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
                     </div>

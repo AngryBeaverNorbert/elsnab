@@ -2,12 +2,12 @@ from .base import *
 
 ALLOWED_HOSTS = ['*']
 
-INSTALLED_APPS += [
-    #  third party apps
-
-    #  local apps
-    'home',
-]
+# INSTALLED_APPS += [
+#     #  third party apps
+#
+#     #  local apps
+#     'home',
+# ]
 
 # DATABASES = {
 #     'default': {

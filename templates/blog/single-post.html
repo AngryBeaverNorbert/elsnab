@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block head_title %}Перший блог | {{ block.super}}{% endblock %}
+{% block head_title %}{{ post.title }} | {{ block.super}}{% endblock %}
 
 {% block content %}
     <!--
@@ -13,10 +13,10 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="block">
-                        <h2>Перший блог нарешті доступний для Вас!</h2>
+                        <h2>{{ post.title | upper }}</h2>
                         <div class="portfolio-meta">
-                            <span>Липень, 2018</span>|
-                            <span> Категорія: Генератори</span>
+                            <span>{{ post.timestamp }}</span>|
+                            <span> Категорія: {% if post.category %} {{ post.category }} {% else %} без категорії {% endif %}</span>
                         </div>
                         <ol class="breadcrumb">
                             <li>
@@ -30,7 +30,7 @@
                                     Блог
                                 </a>
                             </li>
-                            <li class="active">Блог номер один</li>
+                            <li class="active">{{ post.title }}</li>
                         </ol>
                     </div>
                 </div>
@@ -41,34 +41,18 @@
     <section class="single-post">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <div class="post-img">
-                        <img class="img-responsive" alt="" src="{% static 'images/blog/post-1.jpg' %}">
-                    </div>
+                <div class="col-md-10 col-md-offset-1">
+{#                    <div class="post-img">#}
+{#                        <img class="img-responsive" alt="" src="{% static 'images/blog/post-1.jpg' %}">#}
+{#                    </div>#}
                     <div class="post-content">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas sit expedita, iusto repellendus cumque, officia architecto consequatur illo fuga eum sed ut autem eos voluptas. Nemo, a, rem! Atque quisquam aperiam eaque tenetur autem, soluta itaque omnis. Minus nesciunt, sint, animi illum quo ab voluptate esse delectus unde maiores iure, quasi a suscipit ipsam aliquid voluptatem. Perspiciatis eveniet, pariatur illum aut cum dolor neque consequatur error aliquid facilis in quasi temporibus assumenda tempore, doloremque autem saepe enim nihil. Voluptates asperiores ullam voluptate quas similique ratione quia hic, eum distinctio laboriosam, consectetur tempora voluptatibus optio natus cumque est necessitatibus dolore alias.
-                        </p>
-                        <blockquote>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas alias ut totam labore, rerum soluta harum vitae pariatur, optio, ad dolore, nihil eligendi nesciunt repellat esse provident sapiente. Repellendus, minus!
-                        </blockquote>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis expedita repellendus laboriosam aliquid. Neque doloribus ea, id reprehenderit alias saepe debitis eligendi molestias odit, nesciunt rem. Dolorem saepe, provident dolore nesciunt laudantium nostrum enim natus veritatis harum maxime et iure ratione, nulla. Minus excepturi commodi tempore voluptate. Blanditiis similique dolor asperiores ex excepturi perspiciatis, dolores id esse. Voluptate beatae nesciunt cum esse ratione officiis necessitatibus blanditiis ea, laboriosam fugit vero maxime? Voluptatum illo dolorum autem pariatur quisquam. Voluptates soluta culpa necessitatibus veritatis tempora incidunt doloribus placeat repellat et facilis eum sapiente fugit numquam aut, laboriosam aspernatur, esse, magnam excepturi repudiandae amet voluptas nulla quidem. Veritatis nisi consequuntur saepe qui quisquam dignissimos assumenda, iusto odio. Dignissimos reprehenderit esse iusto cupiditate nisi enim, animi similique itaque, perspiciatis error qui. Aperiam, architecto provident.
-                        </p>
-                        <ol>
-                            <li>Ipsum dolor sit amet.</li>
-                            <li>Lorem sit amet.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem ipsum dolor amet.</li>
-                        </ol>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus nostrum consectetur voluptatibus, odio ea ab distinctio, nulla asperiores facere sequi dolorum molestiae magni sed velit officia rerum illo necessitatibus consequatur maiores magnam possimus voluptas suscipit praesentium iste! Praesentium, modi, illum. Sint quis eos expedita porro voluptatum reiciendis minus vitae atque deleniti eligendi nulla, dolorem adipisci, assumenda sunt modi suscipit inventore hic nostrum veniam, ea accusantium quisquam! Ipsum odio, ducimus magnam nam ad quaerat soluta, ab laudantium beatae eius iusto fugit blanditiis laboriosam cupiditate dolor aut nulla a quam dolores? Unde, sunt, explicabo sapiente quos reiciendis iste fuga atque esse voluptatem.
-                        </p>
+                        <p>{{ post.content | safe }}</p>
                     </div>
                     <ul class="social-share">
                         <h4>Поділитися статтею</h4>
                         <li>
-                            <a href="#" class="Facebook">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}"
+                               class="Facebook" style="width: 35px; text-align: center;">
                                 <i class="ion-social-facebook"></i>
                             </a>
                         </li>
